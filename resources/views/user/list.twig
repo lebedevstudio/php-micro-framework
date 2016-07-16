@@ -1,0 +1,11 @@
+{% extends "templates/app.twig" %}
+
+{% block content %}
+    {% for user in users %}
+        <ul>
+            <li><strong>{{ user.id }}</strong> - {{ user.name }}</li>
+        </ul>
+    {% else %}
+        <p>No users have been found.</p>
+    {% endfor %}
+{% endblock %}
